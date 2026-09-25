@@ -1,0 +1,40 @@
+[project]
+name = "yolo-segmentation"
+version = "0.1.0"
+description = "Toml file for all yolo training scripts"
+readme = "README.md"
+requires-python = ">=3.11.9"
+dependencies = [
+  "pydantic>=2.11.7",
+  "roboflow>=1.1.66",
+  "scikit-learn>=1.7.0",
+  "supervision>=0.25.1",
+  "torch>=2.14.0",
+  "torchaudio>=2.11.0",
+  "torchvision>=0.29.0",
+  "ultralytics>=8.4.163",
+]
+
+[tool.uv.sources]
+torch = [
+    { index = "pytorch-cu130" },
+]
+torchvision = [
+    { index = "pytorch-cu130" },
+]
+torchaudio = [
+    { index = "pytorch-cu130" },
+]
+
+[[tool.uv.index]]
+name = "pytorch-cu130"
+url = "https://download.pytorch.org/whl/cu130"
+explicit = true
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.1.0",
+    "ipywidgets>=8.1.8",
+    "nvitop>=1.7.1",
+    "tensorboard>=2.20.0",
+]

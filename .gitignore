@@ -1,0 +1,24 @@
+# Model
+*.pt
+
+# venv
+.venv
+
+# Images
+*.jpg
+*.jpeg
+*.png
+*.webp
+*.bmp
+*.gif
+*.tif
+*.tiff
+
+# Datasets
+datasets/
+
+# YOLO Runs
+runs/
+
+# Traning Folder
+train_*/
